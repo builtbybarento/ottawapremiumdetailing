@@ -110,6 +110,9 @@ input, select, textarea {
 		letter-spacing: 0.075em;
 		line-height: 1.65em;
 	}
+	p{
+		font-weight: 300;
+	}
 
 		@media screen and (max-width: 1680px) {
 
@@ -2565,6 +2568,10 @@ input, select, textarea {
 			text-align: left;
 			width: 50%;
 		}
+		.features h3, .features p{
+			font-family: Roboto;
+			font-weight: 300;
+		}
 
 			.features li:nth-child(1) {
 				background-color: rgba(0, 0, 0, 0.07);
@@ -2608,7 +2615,7 @@ input, select, textarea {
 
 			.features li:before {
 				display: block;
-				color: #00ffcc;
+				color: #eeeeee;
 				position: absolute;
 				left: 1.75em;
 				top: 2.75em;
