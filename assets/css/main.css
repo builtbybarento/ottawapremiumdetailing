@@ -1825,7 +1825,7 @@ input, select, textarea {
 		margin: 0 0 2em 0;
 	}
 
-	label {
+	label, textarea{
 		color: #fff;
 		display: block;
 		font-size: 0.9em;
@@ -1836,6 +1836,7 @@ input, select, textarea {
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="tel"],
 	select,
 	textarea {
 		-moz-appearance: none;
@@ -1856,6 +1857,7 @@ input, select, textarea {
 		input[type="text"]:invalid,
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
+		input[type="tel"]:invalid,
 		select:invalid,
 		textarea:invalid {
 			box-shadow: none;
@@ -1864,6 +1866,7 @@ input, select, textarea {
 		input[type="text"]:focus,
 		input[type="password"]:focus,
 		input[type="email"]:focus,
+		input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
 			box-shadow: 0 0 0 2px #21b2a6;
@@ -1889,6 +1892,7 @@ input, select, textarea {
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="tel"],
 	select {
 		height: 2.75em;
 	}
@@ -3150,7 +3154,7 @@ input, select, textarea {
 			}
 
 		.wrapper.style4 {
-			background-image: url("/images/banner.jpg");
+			background-image: url("/images/banner1.jpg");
 		}
 
 		.wrapper.style5 {
@@ -3826,27 +3830,24 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
+		flex-direction: column;
 		max-width: 45em;
 	}
 
 		#cta .inner header {
-			-moz-order: 1;
-			-webkit-order: 1;
-			-ms-order: 1;
-			order: 1;
 			padding-right: 3em;
-			width: 70%;
+			width: 100%;
+			
 		}
 
 			#cta .inner header p {
 				color: inherit;
 			}
+			#cta .inner header h2{
+				font-size: 2em;
+			}
 
 		#cta .inner .actions {
-			-moz-order: 2;
-			-webkit-order: 2;
-			-ms-order: 2;
-			order: 2;
 			width: 30%;
 		}
 
@@ -3883,10 +3884,6 @@ input, select, textarea {
 
 	#main > header {
 		padding: 12em 0 10em 0 ;
-		background-image:  url("../../images/banner.jpg");
-		background-image:  url("../../images/banner.jpg");
-		background-image:  url("../../images/banner.jpg");
-		background-image:  url("../../images/banner.jpg");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -4054,8 +4051,7 @@ input, select, textarea {
 		background: none;
 	}
 
-	body.is-mobile.landing #banner,
-	body.is-mobile.landing .wrapper.style4 {
+	body.is-mobile.landing #banner{
 		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
@@ -4064,7 +4060,18 @@ input, select, textarea {
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
+	
+	body.is-mobile.landing .wrapper.style4 {
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner1.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner1.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner1.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner1.jpg");
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
 
 	body.is-mobile.landing #footer {
 		background-color: #161616;
 	}
+
