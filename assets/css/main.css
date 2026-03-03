@@ -3620,7 +3620,7 @@ input, select, textarea {
 		justify-content: center;
 		cursor: default;
 		height: 100vh;
-		min-height: 35em;
+		min-height: 100vh;
 		overflow: hidden;
 		position: relative;
 		text-align: center;
@@ -3751,7 +3751,6 @@ input, select, textarea {
 			#banner {
 				padding: 7em 3em 5em 3em ;
 				height: auto;
-				min-height: 0;
 			}
 
 				#banner h2 {
