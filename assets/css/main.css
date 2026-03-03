@@ -297,7 +297,10 @@ h6 a {
 	color: inherit;
 	text-decoration: none;
 }
-
+h1{
+	font-size: 2em;
+	line-height: 2.3em;
+}
 h2 {
 	font-size: 1.35em;
 	line-height: 1.75em;
@@ -3602,7 +3605,7 @@ body.is-menu-visible #menu {
 	-webkit-justify-content: space-between;
 	-ms-justify-content: space-between;
 	justify-content: space-between;
-	height: 5em;
+	height: 7em;
 	left: 0;
 	line-height: 3em;
 	position: fixed;
@@ -3624,7 +3627,7 @@ body.is-menu-visible #menu {
 }
 #header img {
 	height: inherit;
-	padding: 0.3em;
+	padding: 0.5em;
 }
 
 #header h1 a {
@@ -3740,6 +3743,7 @@ body.is-menu-visible #menu {
 	margin-left: 1em;
 	background-color: #e31c25;
 	box-shadow: none;
+	height: 50%;
 }
 #header > .secondary-button {
 	background-color: #eeeeee;
@@ -3974,9 +3978,9 @@ body.is-preload #banner:after {
 #cta .inner header p {
 	color: inherit;
 }
-#cta .inner header h2 {
+/* #cta .inner header h2 {
 	font-size: 2em;
-}
+} */
 
 #cta .inner .actions {
 	width: 30%;
