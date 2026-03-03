@@ -3268,7 +3268,7 @@ button:disabled,
 }
 
 .wrapper.style4 {
-	background-image: url("/images/banner1.jpg");
+	background-image: url("/images/banner1.webp");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -4147,16 +4147,16 @@ body.is-mobile #main > header {
 body.landing #page-wrapper {
 	background-image:
 		-moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-		url("../../images/banner.jpg");
+		url("../../images/banner.webp");
 	background-image:
 		-webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-		url("../../images/banner.jpg");
+		url("../../images/banner.webp");
 	background-image:
 		-ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-		url("../../images/banner.jpg");
+		url("../../images/banner.webp");
 	background-image:
 		linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-		url("../../images/banner.jpg");
+		url("../../images/banner.webp");
 	background-attachment: fixed;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -4175,16 +4175,16 @@ body.is-mobile.landing #page-wrapper {
 body.is-mobile.landing #banner {
 	background-image:
 		-moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-		url("../../images/banner.jpg");
+		url("../../images/banner.webp");
 	background-image:
 		-webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-		url("../../images/banner.jpg");
+		url("../../images/banner.webp");
 	background-image:
 		-ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-		url("../../images/banner.jpg");
+		url("../../images/banner.webp");
 	background-image:
 		linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-		url("../../images/banner.jpg");
+		url("../../images/banner.webp");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -4194,16 +4194,16 @@ body.is-mobile.landing #banner {
 body.is-mobile.landing .wrapper.style4 {
 	background-image:
 		-moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)),
-		url("../../images/banner1.jpg");
+		url("../../images/banner1.webp");
 	background-image:
 		-webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-		url("../../images/banner1.jpg");
+		url("../../images/banner1.webp");
 	background-image:
 		-ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-		url("../../images/banner1.jpg");
+		url("../../images/banner1.webp");
 	background-image:
 		linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-		url("../../images/banner1.jpg");
+		url("../../images/banner1.webp");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
