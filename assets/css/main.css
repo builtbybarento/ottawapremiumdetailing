@@ -3508,8 +3508,12 @@ input, select, textarea {
 					#header h1 a {
 						font-size: 0.8em;
 					}
+					
+					#header .hide-button{
+						display: none
+					}
 
-				}
+				}	
 
 		#header nav {
 			display: -moz-flex;
