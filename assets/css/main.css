@@ -1,5 +1,5 @@
 @import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*
 	Spectral by HTML5 UP
@@ -104,7 +104,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: #fff;
-		font-family: "Open Sans", Helvetica, sans-serif;
+		font-family:  Roboto, Montserrat, "Open Sans", Helvetica, sans-serif;
 		font-size: 15pt;
 		font-weight: 400;
 		letter-spacing: 0.075em;
@@ -1796,6 +1796,9 @@ input, select, textarea {
 			color: #fff;
 			top: 0;
 		}
+		header.major a {
+			font-weight: 700;
+		}
 
 		@media screen and (max-width: 736px) {
 
@@ -2488,7 +2491,7 @@ input, select, textarea {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #ed4933;
+			background-color: #E31C25;
 			box-shadow: none !important;
 			color: #ffffff !important;
 		}
@@ -2564,15 +2567,15 @@ input, select, textarea {
 		}
 
 			.features li:nth-child(1) {
-				background-color: rgba(0, 0, 0, 0.035);
-			}
-
-			.features li:nth-child(2) {
 				background-color: rgba(0, 0, 0, 0.07);
 			}
 
-			.features li:nth-child(3) {
+			.features li:nth-child(2) {
 				background-color: rgba(0, 0, 0, 0.105);
+			}
+
+			.features li:nth-child(3) {
+				background-color: rgba(0, 0, 0, 0.205);
 			}
 
 			.features li:nth-child(4) {
@@ -2704,43 +2707,43 @@ input, select, textarea {
 		}
 
 		.spotlight:nth-child(1) {
-			background-color: rgba(0, 0, 0, 0.075);
-		}
-
-		.spotlight:nth-child(2) {
 			background-color: rgba(0, 0, 0, 0.15);
 		}
 
+		.spotlight:nth-child(2) {
+			background-color: rgba(0, 0, 0, 0.425);
+		}
+
 		.spotlight:nth-child(3) {
-			background-color: rgba(0, 0, 0, 0.225);
-		}
-
-		.spotlight:nth-child(4) {
-			background-color: rgba(0, 0, 0, 0.3);
-		}
-
-		.spotlight:nth-child(5) {
-			background-color: rgba(0, 0, 0, 0.375);
-		}
-
-		.spotlight:nth-child(6) {
-			background-color: rgba(0, 0, 0, 0.45);
-		}
-
-		.spotlight:nth-child(7) {
 			background-color: rgba(0, 0, 0, 0.525);
 		}
 
-		.spotlight:nth-child(8) {
+		.spotlight:nth-child(4) {
+			background-color: rgba(0, 0, 0, 0.375);
+		}
+
+		.spotlight:nth-child(5) {
+			background-color: rgba(0, 0, 0, 0.45);
+		}
+
+		.spotlight:nth-child(6) {
+			background-color: rgba(0, 0, 0, 0.525);
+		}
+
+		.spotlight:nth-child(7) {
 			background-color: rgba(0, 0, 0, 0.6);
 		}
 
-		.spotlight:nth-child(9) {
+		.spotlight:nth-child(8) {
 			background-color: rgba(0, 0, 0, 0.675);
 		}
 
-		.spotlight:nth-child(10) {
+		.spotlight:nth-child(9) {
 			background-color: rgba(0, 0, 0, 0.75);
+		}
+
+		.spotlight:nth-child(10) {
+			background-color: rgba(0, 0, 0, 0.8);
 		}
 
 		@media screen and (max-width: 1280px) {
@@ -2977,11 +2980,11 @@ input, select, textarea {
 			}
 
 		.wrapper.style2 {
-			background-color: #2e3842;
+			background-color: #1C1C1C;
 		}
 
 		.wrapper.style3 {
-			background-color: #505393;
+			background-color: #BB000E;
 			color: #d3d4e4;
 		}
 
@@ -3446,7 +3449,7 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease;
 		-ms-transition: background-color 0.2s ease;
 		transition: background-color 0.2s ease;
-		background: #2e3842;
+		background: #0e0e0e;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -3590,7 +3593,14 @@ input, select, textarea {
 
 		#header.alt {
 			background: transparent;
+			
 		}
+
+			#header.alt button {
+				background: #00000000;
+				box-shadow: inset 0 0 0 2px #fff;
+				color: #fff
+			}
 
 			#header.alt h1 {
 				pointer-events: none;
@@ -3601,6 +3611,12 @@ input, select, textarea {
 	#header > .button {
 		display: inline-block;
 		margin-left: 1em;
+		background-color: #E31C25;
+    box-shadow: none
+	}
+	#header > .secondary-button{
+		background-color: #eeeeee;
+		color: black
 	}
 
 	#header > button:first-of-type {
@@ -3740,7 +3756,7 @@ input, select, textarea {
 			-ms-transition-delay: 1.25s;
 			transition-delay: 1.25s;
 			content: '';
-			background: #080808;
+			background: #111111;
 			display: block;
 			width: 100%;
 			height: 100%;
@@ -4024,7 +4040,7 @@ input, select, textarea {
 	}
 
 	body.landing #footer {
-		background-color: rgba(29, 36, 42, 0.9);
+		background-color: #161616;
 	}
 
 	body.is-mobile.landing #page-wrapper {
@@ -4043,5 +4059,5 @@ input, select, textarea {
 	}
 
 	body.is-mobile.landing #footer {
-		background-color: #1d242a;
+		background-color: #161616;
 	}
