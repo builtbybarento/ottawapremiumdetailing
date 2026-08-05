@@ -427,18 +427,53 @@ section[id] {
 	text-align: center;
 }
 
+/* Nudged below centre so the text clears the logo in the photo itself. */
+#banner .inner {
+	margin: 3.5em auto 0 auto;
+	max-width: 42em;
+	padding: 0 2em;
+	position: relative;
+	z-index: 1;
+}
+
+.banner-eyebrow {
+	color: var(--accent-hover);
+	font-size: 0.75em;
+	font-weight: 600;
+	letter-spacing: 0.3em;
+	margin: 0 0 1.25em 0;
+	text-transform: uppercase;
+}
+
 #banner h1 {
 	display: inline-block;
-	font-size: 1.75em;
-	line-height: 1.75em;
+	font-size: clamp(1.75em, 5vw, 2.75em);
+	letter-spacing: 0.05em;
+	line-height: 1.3em;
+	margin: 0;
 	opacity: 1;
-	padding: 0.35em 1em;
+	padding: 0.4em 0.75em;
 	position: relative;
 	transform: scale(1);
 	transition:
 		transform 0.5s ease,
 		opacity 0.5s ease;
 	z-index: 1;
+}
+
+.banner-lead {
+	color: rgba(255, 255, 255, 0.85);
+	font-size: 1.05em;
+	letter-spacing: 0.02em;
+	line-height: 1.6em;
+	margin: 1.5em auto 2.25em auto;
+	max-width: 26em;
+	text-transform: none;
+}
+
+#banner .button {
+	font-size: 0.9em;
+	height: 3.5em;
 }
 
 #banner h1::before,
@@ -462,9 +497,27 @@ section[id] {
 	right: 0;
 }
 
-#banner p {
-	letter-spacing: 0.225em;
-	text-transform: uppercase;
+/* Eyebrow, lead and buttons rise into place behind the headline. */
+.banner-eyebrow,
+.banner-lead,
+#banner .actions {
+	opacity: 1;
+	transform: translateY(0);
+	transition:
+		opacity 0.8s ease,
+		transform 0.8s ease;
+}
+
+.banner-eyebrow {
+	transition-delay: 0.15s;
+}
+
+.banner-lead {
+	transition-delay: 0.5s;
+}
+
+#banner .actions {
+	transition-delay: 0.65s;
 }
 
 #banner .more {
@@ -520,9 +573,10 @@ section[id] {
 		padding: 7em 3em 5em 3em;
 	}
 
-	#banner h1 {
-		font-size: 1.25em;
-		line-height: 1.65em;
+	/* The section already carries side padding at this size. */
+	#banner .inner {
+		margin-top: 2em;
+		padding: 0;
 	}
 
 	#banner .more {
@@ -981,6 +1035,13 @@ body.is-preload *::after {
 body.is-preload #banner h1 {
 	opacity: 0;
 	transform: scale(0.95);
+}
+
+body.is-preload .banner-eyebrow,
+body.is-preload .banner-lead,
+body.is-preload #banner .actions {
+	opacity: 0;
+	transform: translateY(1em);
 }
 
 body.is-preload #banner h1::before,

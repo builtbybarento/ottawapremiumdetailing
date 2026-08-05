@@ -6,7 +6,10 @@
 	final state right away.
 */
 
-body.is-preload #banner h1 {
+body.is-preload #banner h1,
+body.is-preload .banner-eyebrow,
+body.is-preload .banner-lead,
+body.is-preload #banner .actions {
 	opacity: 1;
 	transform: none;
 }
