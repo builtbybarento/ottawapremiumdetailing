@@ -1,226 +1,197 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Ottawa Premium Detailing</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="icon" type="image/png" href="/images/logo.png">
+	<meta name="description"
+		content="Ottawa Premium Detailing is a mobile car detailing service in Ottawa. Interior detailing, exterior wash and wax, and recurring packages starting at $99. Call (613) 700-8188.">
+	<link rel="icon" type="image/png" href="images/logo.png">
+	<link rel="preload" as="image" href="images/banner.webp">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300..800&display=swap">
+	<link rel="stylesheet" href="assets/css/main.css">
 	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
+		<link rel="stylesheet" href="assets/css/noscript.css">
 	</noscript>
 </head>
 
-<body class="landing is-preload">
+<body class="is-preload">
 
-	<!-- Page Wrapper -->
-	<div id="page-wrapper">
+	<!-- Icons, defined once and referenced with <use> below. -->
+	<svg class="sprite" aria-hidden="true">
+		<symbol id="i-phone" viewBox="0 0 512 512"><path transform="translate(0 448) scale(1 -1)" d="M493.4 423.4c10.8994 -2.5 18.5996 -12.2002 18.5996 -23.4004c0 -256.5 -207.9 -464 -464 -464c-11.2998 0 -20.9004 7.7998 -23.4004 18.5996l-24 104c-2.59961 11.3008 3.30078 22.9004 14 27.6006l112 48c9.80078 4.2002 21.2002 1.39941 28 -6.90039
+l49.6006 -60.5996c78.2998 36.7002 141.2 100.5 177.2 177.2l-60.6006 49.5996c-8.2998 6.7002 -11.0996 18.2002 -6.89941 28l48 112c4.59961 10.5996 16.1992 16.5 27.5 13.9004z"/></symbol>
+		<symbol id="i-envelope" viewBox="0 0 512 512"><path transform="translate(0 448) scale(1 -1)" d="M502.3 257.2c3.90039 3.09961 9.7002 0.200195 9.7002 -4.7002v-204.5c0 -26.5 -21.5 -48 -48 -48h-416c-26.5 0 -48 21.5 -48 48v204.4c0 5 5.7002 7.7998 9.7002 4.69922c22.3994 -17.3994 52.0996 -39.5 154.1 -113.6
+c21.1006 -15.4004 56.7002 -47.7998 92.2002 -47.5996c35.7002 -0.300781 72 32.7998 92.2998 47.5996c102 74.0996 131.601 96.2998 154 113.7zM256 128c-23.2002 -0.400391 -56.5996 29.2002 -73.4004 41.4004c-132.699 96.2998 -142.8 104.8 -173.399 128.699
+c-5.7998 4.60059 -9.2002 11.5 -9.2002 18.9004v19c0 26.5 21.5 48 48 48h416c26.5 0 48 -21.5 48 -48v-19c0 -7.40039 -3.40039 -14.4004 -9.2002 -18.9004c-30.5996 -24 -40.7002 -32.3994 -173.399 -128.699c-16.8008 -12.2002 -50.2002 -41.8008 -73.4004 -41.4004z"/></symbol>
+		<symbol id="i-bolt" viewBox="0 0 320 512"><path transform="translate(0 448) scale(1 -1)" d="M296 288c18.5 0 30 -20.0996 20.7002 -36l-176 -304c-4.40039 -7.59961 -12.4004 -12 -20.7998 -12c-15.3008 0 -26.9004 14.2998 -23.3008 29.5l46.1006 194.5h-118.7c-14.5 0 -25.7002 12.7998 -23.7998 27.2002l32 240
+c1.59961 11.8994 11.7998 20.7998 23.7998 20.7998h144c15.7002 0 27.2002 -15 23.2002 -30.2002l-42.6006 -129.8h115.4z"/></symbol>
+		<symbol id="i-star" viewBox="0 0 576 512"><path transform="translate(0 448) scale(1 -1)" d="M259.3 430.2c11.7998 23.8994 45.7002 23.5996 57.4004 0l65.2998 -132.4l146.1 -21.2998c26.2002 -3.7998 36.7002 -36.0996 17.7002 -54.5996l-105.7 -103l25 -145.5c4.5 -26.3008 -23.1992 -45.9004 -46.3994 -33.7002l-130.7 68.7002l-130.7 -68.7002
+c-23.2002 -12.2998 -50.8994 7.39941 -46.3994 33.7002l25 145.5l-105.7 103c-19 18.5 -8.5 50.7998 17.7002 54.5996l146.1 21.2998z"/></symbol>
+		<symbol id="i-trophy" viewBox="0 0 576 512"><path transform="translate(0 448) scale(1 -1)" d="M552 384c13.2998 0 24 -10.7002 24 -24v-56c0 -35.7002 -22.5996 -72.4004 -61.9004 -100.7c-31.3994 -22.7002 -69.6992 -37.0996 -110 -41.7002c-31.3994 -52.0996 -68.0996 -73.5996 -68.0996 -73.5996v-72h48c35.2998 0 64 -20.7002 64 -56v-12
+c0 -6.59961 -5.40039 -12 -12 -12h-296c-6.59961 0 -12 5.40039 -12 12v12c0 35.2998 28.7002 56 64 56h48v72s-36.7002 21.5 -68.0996 73.5996c-40.2002 4.60059 -78.5 19 -110 41.7002c-39.4004 28.2998 -61.9004 65 -61.9004 100.7v56c0 13.2998 10.7002 24 24 24h104v40
+c0 13.2998 10.7002 24 24 24h272c13.2998 0 24 -10.7002 24 -24v-40h104zM99.2998 255.2c12.5 -9 26.6006 -16.2002 41.7002 -21.4004c-7 25 -11.7998 53.6006 -12.7998 86.2002h-64.2002v-16c0 -11.5996 10.9004 -31.2002 35.2998 -48.7998zM512 304v16h-64.2998
+c-1 -32.5996 -5.7998 -61.2002 -12.7998 -86.2002c15.0996 5.2002 29.2998 12.4004 41.7998 21.4004c17.5996 12.7002 35.2998 32.7002 35.2998 48.7998z"/></symbol>
+		<symbol id="i-facebook-f" viewBox="0 0 320 512"><path transform="translate(0 448) scale(1 -1)" d="M279.14 160h-74.6895v-224h-100.17v224h-81.3906v92.6602h81.3906v70.6201c0 80.3398 47.8594 124.72 121.08 124.72c35.0693 0 71.75 -6.25977 71.75 -6.25977v-78.8906h-40.4199c-39.8203 0 -52.2402 -24.71 -52.2402 -50.0596v-60.1299h88.9102z"/></symbol>
+		<symbol id="i-instagram" viewBox="0 0 448 512"><path transform="translate(0 448) scale(1 -1)" d="M224.1 307c63.6006 0 114.9 -51.2998 114.9 -114.9c0 -63.5996 -51.2998 -114.899 -114.9 -114.899c-63.5996 0 -114.899 51.2998 -114.899 114.899c0 63.6006 51.2998 114.9 114.899 114.9zM224.1 117.4c41.1006 0 74.7002 33.5 74.7002 74.6992
+c0 41.2002 -33.5 74.7002 -74.7002 74.7002c-41.1992 0 -74.6992 -33.5 -74.6992 -74.7002c0 -41.1992 33.5996 -74.6992 74.6992 -74.6992zM370.5 311.7c0 -14.9004 -12 -26.7998 -26.7998 -26.7998c-14.9004 0 -26.7998 12 -26.7998 26.7998s12 26.7998 26.7998 26.7998
+s26.7998 -12 26.7998 -26.7998zM446.6 284.5c2.10059 -37 2.10059 -147.8 0 -184.8c-1.7998 -35.9004 -10 -67.7002 -36.1992 -93.9004c-26.2002 -26.2998 -58 -34.5 -93.9004 -36.2002c-37 -2.09961 -147.9 -2.09961 -184.9 0
+c-35.8994 1.80078 -67.5996 10 -93.8994 36.2002s-34.5 58 -36.2002 93.9004c-2.09961 37 -2.09961 147.899 0 184.899c1.7998 35.9004 9.90039 67.7002 36.2002 93.9004s58.0996 34.4004 93.8994 36.0996c37 2.10059 147.9 2.10059 184.9 0
+c35.9004 -1.7998 67.7002 -10 93.9004 -36.1992c26.2998 -26.2002 34.5 -58 36.1992 -93.9004zM398.8 60c11.7002 29.4004 9 99.5 9 132.1c0 32.6006 2.7002 102.601 -9 132.101c-7.89941 19.7002 -23 34.7998 -42.5996 42.5996c-29.4004 11.6006 -99.5 9 -132.101 9
+c-32.5996 0 -102.6 2.7002 -132.1 -9c-19.7002 -7.89941 -34.7998 -23 -42.5996 -42.5996c-11.6006 -29.4004 -9 -99.5 -9 -132.101c0 -32.5996 -2.7002 -102.6 9 -132.1c7.89941 -19.7002 23 -34.7998 42.5996 -42.5996c29.4004 -11.6006 99.5 -9 132.1 -9
+c32.6006 0 102.601 -2.7002 132.101 9c19.7002 7.89941 34.7998 23 42.5996 42.5996z"/></symbol>
+	</svg>
 
-		<!-- Header -->
-		<header id="header" class="alt">
-			<img src="images/logo.png" alt="Ottawa Premium Detailing">
-			<!-- <h1><a href="index.html">Ottawa Premium Detailing</a></h1> -->
-			<button onclick="window.location.href='tel:+16137008188'"><i class="fas fa-phone"></i> Call Now</button>
-			<button class="hide-button secondary-button"
-				 onclick="document.getElementById('cta').scrollIntoView({ behavior: 'smooth' })"><i class="fas fa-envelope"></i>
-				Contact Us</button>
-		</header>
+	<!-- Header (hidden while the banner is in view, see assets/js/main.js) -->
+	<header id="header" class="is-hidden">
+		<img class="logo" src="images/logo.png" alt="Ottawa Premium Detailing" width="785" height="521">
+		<a class="button primary" href="tel:+16137008188">
+			<svg class="icon" viewBox="0 0 512 512"><use href="#i-phone"></use></svg> Call Now
+		</a>
+		<a class="button light hide-on-mobile" href="#cta">
+			<svg class="icon" viewBox="0 0 512 512"><use href="#i-envelope"></use></svg> Contact Us
+		</a>
+	</header>
+
+	<main>
 
 		<!-- Banner -->
 		<section id="banner">
 			<div class="inner">
-				<h2>Ottawa Premium Detailing</h2>
+				<h1>Ottawa Premium Detailing</h1>
 				<p>Mobile car detailing service in Ottawa</p>
-				<ul class="actions special">
-					<li><a href="tel:+16137008188" class="button primary"><i class="fas fa-phone"></i> Call Now To Book </a></li>
-					<li><a href="#cta" class="button secondary-button"><i class="fas fa-envelope"></i> Contact Us</a></li>
-				</ul>
+				<div class="actions">
+					<a class="button primary" href="tel:+16137008188">
+						<svg class="icon" viewBox="0 0 512 512"><use href="#i-phone"></use></svg> Call Now To Book
+					</a>
+					<a class="button" href="#cta">
+						<svg class="icon" viewBox="0 0 512 512"><use href="#i-envelope"></use></svg> Contact Us
+					</a>
+				</div>
 			</div>
-			<a href="#two" class="more">Learn More</a>
+			<a class="more" href="#services">Learn More</a>
 		</section>
 
-		<!-- One -->
-		<!-- <section id="one" class="wrapper style1 special">
-						<div class="inner">
-							<header class="major">
-								<h2>Arcu aliquet vel lobortis ata nisl<br />
-								eget augue amet aliquet nisl cep donec</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
-								fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
-							</header>
-							<ul class="icons major">
-								<li><span class="icon fa-gem major style1"><span class="label">Lorem</span></span></li>
-								<li><span class="icon fa-heart major style2"><span class="label">Ipsum</span></span></li>
-								<li><span class="icon solid fa-code major style3"><span class="label">Dolor</span></span></li>
-							</ul>
-						</div>
-					</section> -->
-
-		<!-- Two -->
-		<section id="two" class="wrapper alt style2">
-			<section class="spotlight">
-				<div class="image"><img src="images/pic01.webp" alt="" /></div>
+		<!-- Services -->
+		<section id="services">
+			<div class="spotlight">
+				<img src="images/pic01.webp" width="1080" height="814" loading="lazy" decoding="async"
+					alt="Detailed car interior with clean leather seats and dashboard">
 				<div class="content">
 					<h2>Precision Interior Detailing</h2>
-					<p>Every corner, every crevice, perfectly clean. Detailing so precise, you’ll forget it ever got dirty.</p>
+					<p>Every corner, every crevice, perfectly clean. Detailing so precise, you’ll forget it ever got dirty.
+						Services include salt removal, carpet and seat shampoo, leather conditioning, pet hair, headliner cleaning,
+						stain removal.</p>
 				</div>
-			</section>
-			<section class="spotlight">
-				<div class="image"><img src="images/pic02.webp" alt="" /></div>
+			</div>
+			<div class="spotlight">
+				<img src="images/pic02.webp" width="1024" height="768" loading="lazy" decoding="async"
+					alt="Car covered in snow foam during an exterior wash">
 				<div class="content">
 					<h2>Exterior Wash and Wax</h2>
 					<p>Polish and protect your car to bring out its true shine. Enjoy a flawless finish that turns heads and lasts
 						for miles.</p>
 				</div>
-			</section>
-			<section class="spotlight">
-				<div class="image"><img src="images/pic03.webp" alt="" /></div>
+			</div>
+			<div class="spotlight">
+				<img src="images/pic03.webp" width="2048" height="1536" loading="lazy" decoding="async"
+					alt="Polished dark Camaro with a mirror-like paint finish">
 				<div class="content">
 					<h2>Recurring Detailing Packages</h2>
 					<p>Keep your vehicle consistently clean without the hassle of rebooking. Our recurring detailing package
 						provides scheduled cleanings that maintain your car’s shine, protect its surfaces, and keep it looking its
 						best all year long.</p>
 				</div>
-			</section>
+			</div>
 		</section>
 
-		<!-- Three -->
-		<section id="three" class="wrapper style3 special">
+		<!-- Packages -->
+		<section id="packages" class="section">
 			<div class="inner">
-				<header class="major">
-					<h1>Packages starting at $99!</h1>
+				<header class="section-heading">
+					<h2>Packages starting at $99!</h2>
 					<p>Our detailing packages are designed to fit a range of needs and budgets. <a href="#cta">Contact us</a> to
 						find the option that works best for you.</p>
 				</header>
-				<ul class="features">
-					<li class="fas fa-bolt">
+				<ul class="packages">
+					<li>
+						<svg class="icon" viewBox="0 0 320 512"><use href="#i-bolt"></use></svg>
 						<h3>Express Detailing</h3>
 						<p>An affordable refresh to keep your vehicle looking clean and well maintained.</p>
 					</li>
-					<!-- <li class="icon solid fa-laptop">
-									<h3>SUV/Truck Basic Detailing</h3>
-									<p>An affordable refresh to keep your vehicle looking clean and well maintained.</p>
-								</li> -->
-					<li class="fas fa-star">
-						<h3>Premium Detailing </br>(Top Pick)</h3>
+					<li>
+						<svg class="icon" viewBox="0 0 576 512"><use href="#i-star"></use></svg>
+						<h3>Premium Detailing<br>(Top Pick)</h3>
 						<p>Our most popular package for a complete interior and exterior refresh. Includes a full wash and wax,
 							interior vacuum, seat shampoo, dashboard and trim cleaning, vents and cupholders detailed, and streak-free
 							interior glass.</p>
 					</li>
-					<!-- <li class="icon solid fa-headphones-alt">
-									<h3>SUV/Truck Premium Detailing (Top Pick)</h3>
-									<p>Our most popular package for a complete interior and exterior refresh. Includes a full wash and wax, interior vacuum, seat shampoo, dashboard and trim cleaning, vents and cupholders detailed, and streak-free interior glass.</p>
-								</li> -->
-					<li class="fas fa-trophy">
+					<li>
+						<svg class="icon" viewBox="0 0 576 512"><use href="#i-trophy"></use></svg>
 						<h3>Ultimate Detailing Package</h3>
 						<p>Our most comprehensive detailing package for a true deep clean. Includes everything in our full interior
 							and exterior detail plus carpet and upholstery extraction, stain treatment, leather conditioning, engine
 							bay wipe-down, and a longer-lasting paint sealant for added protection and shine.</p>
 					</li>
-					<!-- <li class="icon fa-flag">
-									<h3>SUV/Truck Ultimate Detailing Package</h3>
-									<p>Our most comprehensive detailing package for a true deep clean. Includes everything in our full interior and exterior detail plus carpet and upholstery extraction, stain treatment, leather conditioning, engine bay wipe-down, and a longer-lasting paint sealant for added protection and shine.</p>
-								</li> -->
 				</ul>
 			</div>
 		</section>
 
-		<!-- CTA -->
-		<section id="cta" class="wrapper style4">
+		<!-- Call to action -->
+		<section id="cta" class="section">
 			<div class="inner">
-				<header>
-					<h1>Book With Us Today</h1>
+				<h2>Book With Us Today</h2>
+				<p class="phone"><a href="tel:+16137008188">(613) 700-8188</a></p>
+				<a class="button primary cta-call" href="tel:+16137008188">Call Now</a>
 
-					<h2><a href="tel:+16137008188">(613) 700-8188</a></h2>
-					<p></p>
-				</header>
-				<ul class="actions stacked">
-					<li><a href="tel:+16137008188" class="button fit primary">Call Now</a></li>
-				</ul>
+				<p>Call us or fill out the form below to schedule your car for a total refresh. We look forward to hearing from
+					you and helping with your car detailing needs.</p>
 
-				<p>Call us or fill out the form below to schedule your car for a total refresh. We
-					look forward to hearing from you and helping with your car detailing needs.</p>
 				<form id="contact-form">
-					<div class="fields">
-						<div class="field">
-							<label for="name">Name</label>
-							<input type="text" name="name" id="name" required />
-						</div>
-						<div class="field">
-							<label for="email">Email</label>
-							<input type="email" name="email" id="email" required />
-						</div>
-						<div class="field">
-							<label for="tel">Phone</label>
-							<input type="tel" name="tel" id="tel" required />
-						</div>
-						<div class="field">
-							<label for="message">Short Description (Optional)</label>
-							<textarea type="text" name="message" id="message" rows="4"></textarea>
-						</div>
+					<div class="field">
+						<label for="name">Name</label>
+						<input type="text" name="name" id="name" autocomplete="name" required>
 					</div>
-					<ul class="actions">
-						<li><input type="submit" value="Send Message" /></li>
-					</ul>
+					<div class="field">
+						<label for="email">Email</label>
+						<input type="email" name="email" id="email" autocomplete="email" required>
+					</div>
+					<div class="field">
+						<label for="tel">Phone</label>
+						<input type="tel" name="tel" id="tel" autocomplete="tel" required>
+					</div>
+					<div class="field">
+						<label for="message">Short Description (Optional)</label>
+						<textarea name="message" id="message" rows="4"></textarea>
+					</div>
+					<button class="button" type="submit">Send Message</button>
+					<p class="form-status" id="form-status" role="status" aria-live="polite"></p>
 				</form>
-
 			</div>
-
 		</section>
 
-		<!-- Footer -->
-		<footer id="footer">
-			<ul class="icons">
-				<li><a href="https://www.facebook.com/profile.php?id=61587823135899" class="icon brands fa-facebook-f"><span
-							class="label">Facebook</span></a></li>
-				<li><a href="https://www.instagram.com/ottawapremiumdetailing/" class="icon brands fa-instagram"><span
-							class="label">Instagram</span></a></li>
-				<li><a href="mailto:ottawadetailingprofessionals@gmail.com" class="icon solid fa-envelope"><span
-							class="label">Email</span></a></li>
-				<li><a href="tel:16137008188" class="icon solid fa-phone"><span class="label">Phone</span></a></li>
-			</ul>
-			<ul class="copyright">
-				<li>&copy; Ottawa Premium Detailing</li>
-			</ul>
-		</footer>
+	</main>
 
-	</div>
+	<!-- Footer -->
+	<footer id="footer">
+		<ul class="social">
+			<li><a href="https://www.facebook.com/profile.php?id=61587823135899" aria-label="Facebook">
+					<svg class="icon" viewBox="0 0 320 512"><use href="#i-facebook-f"></use></svg></a></li>
+			<li><a href="https://www.instagram.com/ottawapremiumdetailing/" aria-label="Instagram">
+					<svg class="icon" viewBox="0 0 448 512"><use href="#i-instagram"></use></svg></a></li>
+			<li><a href="mailto:ottawadetailingprofessionals@gmail.com" aria-label="Email">
+					<svg class="icon" viewBox="0 0 512 512"><use href="#i-envelope"></use></svg></a></li>
+			<li><a href="tel:+16137008188" aria-label="Phone">
+					<svg class="icon" viewBox="0 0 512 512"><use href="#i-phone"></use></svg></a></li>
+		</ul>
+		<p class="copyright">&copy; Ottawa Premium Detailing</p>
+	</footer>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-	<script>
-		(function () {
-			emailjs.init("ZQKpwfu8STEYdc4uG");
-		})();
-
-		document.getElementById("contact-form").addEventListener("submit", function (e) {
-			e.preventDefault();
-
-			emailjs.sendForm(
-				"service_01aewsp",
-				"template_ih0rbka",
-				this
-			)
-				.then(() => {
-					alert("Message sent successfully!");
-					this.reset();
-				})
-				.catch((err) => {
-					console.error("EmailJS error:", err);
-					alert("Failed to send message.");
-				});
-		});
-	</script>
-
-
+	<script defer src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+	<script defer src="assets/js/main.js"></script>
 
 </body>
 

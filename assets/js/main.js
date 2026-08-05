@@ -1,83 +1,86 @@
 /*
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Ottawa Premium Detailing
 */
 
-(function($) {
+(function () {
+	"use strict";
 
-	var	$window = $(window),
-		$body = $('body'),
-		$wrapper = $('#page-wrapper'),
-		$banner = $('#banner'),
-		$header = $('#header');
+	var EMAILJS = {
+		publicKey: "ZQKpwfu8STEYdc4uG",
+		serviceId: "service_01aewsp",
+		templateId: "template_ih0rbka",
+	};
 
-	// Breakpoints.
-		breakpoints({
-			xlarge:   [ '1281px',  '1680px' ],
-			large:    [ '981px',   '1280px' ],
-			medium:   [ '737px',   '980px'  ],
-			small:    [ '481px',   '736px'  ],
-			xsmall:   [ null,      '480px'  ]
+	var header = document.getElementById("header");
+	var banner = document.getElementById("banner");
+	var form = document.getElementById("contact-form");
+
+	/* Play the banner intro once everything has finished loading. */
+	window.addEventListener("load", function () {
+		setTimeout(function () {
+			document.body.classList.remove("is-preload");
+		}, 100);
+	});
+
+	/* The header stays out of the way while the banner fills the screen and
+	   fades in once it has been scrolled past. */
+	if (header && banner) {
+		var pending = false;
+
+		var update = function () {
+			pending = false;
+			var trigger = banner.offsetHeight - header.offsetHeight - 1;
+			header.classList.toggle("is-hidden", window.scrollY < trigger);
+		};
+
+		var schedule = function () {
+			if (pending) return;
+			pending = true;
+			requestAnimationFrame(update);
+		};
+
+		window.addEventListener("scroll", schedule, { passive: true });
+		window.addEventListener("resize", schedule, { passive: true });
+		update();
+	}
+
+	/* Contact form -> EmailJS. */
+	if (form) {
+		var status = document.getElementById("form-status");
+		var submit = form.querySelector('button[type="submit"]');
+
+		var setStatus = function (message, isError) {
+			if (!status) return;
+			status.textContent = message;
+			status.classList.toggle("is-error", !!isError);
+		};
+
+		if (window.emailjs) emailjs.init(EMAILJS.publicKey);
+
+		form.addEventListener("submit", function (event) {
+			event.preventDefault();
+
+			if (!window.emailjs) {
+				setStatus("The form is unavailable right now. Please call (613) 700-8188.", true);
+				return;
+			}
+
+			submit.disabled = true;
+			setStatus("Sending…");
+
+			emailjs
+				.sendForm(EMAILJS.serviceId, EMAILJS.templateId, form)
+				.then(function () {
+					form.reset();
+					setStatus("Thanks! Your message has been sent — we’ll be in touch shortly.");
+				})
+				.catch(function (error) {
+					console.error("EmailJS error:", error);
+					setStatus("Sorry, that didn’t send. Please call (613) 700-8188 instead.", true);
+				})
+				.then(function () {
+					submit.disabled = false;
+				});
 		});
-
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
-
-	// Mobile?
-		if (browser.mobile)
-			$body.addClass('is-mobile');
-		else {
-
-			breakpoints.on('>medium', function() {
-				$body.removeClass('is-mobile');
-			});
-
-			breakpoints.on('<=medium', function() {
-				$body.addClass('is-mobile');
-			});
-
-		}
-
-	// Scrolly.
-		$('.scrolly')
-			.scrolly({
-				speed: 1500,
-				offset: $header.outerHeight()
-			});
-
-	// Menu.
-		$('#menu')
-			.append('<a href="#menu" class="close"></a>')
-			.appendTo($body)
-			.panel({
-				delay: 500,
-				hideOnClick: true,
-				hideOnSwipe: true,
-				resetScroll: true,
-				resetForms: true,
-				side: 'right',
-				target: $body,
-				visibleClass: 'is-menu-visible'
-			});
-
-	// Header.
-		if ($banner.length > 0
-		&&	$header.hasClass('alt')) {
-
-			$window.on('resize', function() { $window.trigger('scroll'); });
-
-			$banner.scrollex({
-				bottom:		$header.outerHeight() + 1,
-				terminate:	function() { $header.removeClass('alt'); },
-				enter:		function() { $header.addClass('alt'); },
-				leave:		function() { $header.removeClass('alt'); }
-			});
-
-		}
-
-})(jQuery);
+	}
+})();
