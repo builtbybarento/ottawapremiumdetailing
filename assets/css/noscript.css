@@ -1,29 +1,23 @@
 /*
-	Ottawa Premium Detailing
-
-	Without JavaScript nothing ever removes body.is-preload, so the banner
-	would stay hidden. This file skips the intro animation and shows the
-	final state right away.
+	Fallbacks when JavaScript is unavailable.
 */
 
-body.is-preload #banner h1,
-body.is-preload .banner-eyebrow,
-body.is-preload .banner-lead,
-body.is-preload #banner .actions {
+/* Scroll-reveal animations: show everything. */
+.reveal {
 	opacity: 1;
 	transform: none;
 }
 
-body.is-preload #banner h1::before,
-body.is-preload #banner h1::after {
-	width: 100%;
+/* The postal gate modal never opens; its triggers act as plain links. */
+.gate {
+	display: none;
 }
 
-body.is-preload #banner .more {
-	opacity: 1;
-	transform: none;
-}
-
-body.is-preload #banner::after {
-	opacity: 0;
+/* The booking flow can't run — hide the form chrome, the noscript notice
+   in book.html explains how to book instead. */
+.booking-page .rail,
+.booking-page #bflow,
+.booking-page .msummary,
+.booking-page .aside-summary {
+	display: none;
 }
