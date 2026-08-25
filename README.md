@@ -6,7 +6,7 @@ with a self-contained online booking pipeline — no backend, no build step.
 ## Pages
 
 - `index.html` — the homepage: hero with postal-code entry, how-it-works,
-  services, package tiers, comparison tables, add-ons, recurring plan pitch,
+  services, package tiers, comparison tables, add-ons,
   service area, FAQ and a contact form.
 - `book.html` — the booking pipeline. Six steps: location → vehicle → services
   → add-ons → schedule → contact. A live summary sidebar tracks the estimated
@@ -28,7 +28,7 @@ with a self-contained online booking pipeline — no backend, no build step.
    service/template IDs are duplicated in **both** `assets/js/main.js` (contact
    form) and `assets/js/booking.js` (booking flow) — change them together.
 
-Deep links: `book.html?pre=interior:2,exterior:1&vehicle=SUV&recurring=1`
+Deep links: `book.html?pre=interior:2,exterior:1&vehicle=SUV`
 preselects options — the tier cards and comparison tables on the homepage use
 these.
 
