@@ -229,7 +229,6 @@
 				}),
 				date: dateInput.value,
 				timewindow: checkedInput("timewindow") ? checkedInput("timewindow").value : "",
-				recurring: !!checkedInput("recurring"),
 				name: fieldValue("b-name"),
 				tel: fieldValue("b-tel"),
 				email: fieldValue("b-email"),
@@ -266,7 +265,6 @@
 		});
 		if (data.date) dateInput.value = data.date;
 		if (data.timewindow) check('input[name="timewindow"][value="' + data.timewindow + '"]');
-		if (data.recurring) check('input[name="recurring"]');
 		["name", "tel", "email", "address", "notes"].forEach(function (key) {
 			var el = document.getElementById("b-" + key);
 			if (el && data[key]) el.value = data[key];
@@ -494,7 +492,6 @@
 				: "None"
 		);
 		line("Estimated total", totalEl ? totalEl.textContent : "");
-		line("Recurring", checkedInput("recurring") ? "Yes — wants a recurring schedule" : "");
 		lines.push("");
 		line("Preferred date", formatDate(dateInput.value) || "Flexible");
 		line("Time window", timeInput ? timeInput.value : "");
@@ -589,9 +586,6 @@
 	});
 	if (query.get("vehicle")) {
 		check('input[name="vehicle"][value="' + query.get("vehicle").replace(/[^A-Za-z]/g, "") + '"]');
-	}
-	if (query.get("recurring")) {
-		check('input[name="recurring"]');
 	}
 
 	syncChecked();
